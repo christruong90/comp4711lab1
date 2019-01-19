@@ -91,7 +91,7 @@
 	function startQuiz(){
 		var userInput = prompt("Number of Questions?");
 
-		if(userInput >0) {
+		if(userInput >0 && userInput < 6) {
 			for (let i = 0; i < userInput; i++) {
 				document.writeln(quiz[i].question);
 				document.writeln("<br>")
