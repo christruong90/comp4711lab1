@@ -61,12 +61,24 @@ function displayQuiz() {
 	button.setAttribute('type', 'button')
 	button.setAttribute('id', 'submitQuiz')
 	button.setAttribute('onclick', 'validateAnswers()')
-	button.value = "Submit Quiz"
 	let buttonText = document.createTextNode("Submit Quiz")
-
 	button.appendChild(buttonText)
+
+	let link = document.createElement('a')
+	// link.setAttribute('href', 'admin.html')
+	link.href = 'admin.html'
+	let returnBtn =document.createElement('button')
+	returnBtn.setAttribute('type', 'button')
+	returnBtn.setAttribute('id', 'goAdmin')
+	let returnText = document.createTextNode("Return To Admin Page")
+	returnBtn.appendChild(returnText)
+	link.appendChild(returnBtn)
+	
+
+	
 	form.appendChild(space)
 	form.appendChild(button)
+	form.appendChild(link)
 
 	document.getElementById('quizDisplay').appendChild(form)
 
