@@ -1,0 +1,37 @@
+#questionBox {
+	width: 400px;
+	height: 40px;
+}
+
+.choiceBox {
+	width: 300px;
+}
+
+.updateQclass {
+	width: 400px;
+	height: 40px;
+}
+
+body{
+	text-align: center;
+}
+
+span.hColor {
+	background-color: yellow;
+}
+
+span.selectColor {
+	background-color: red;
+}
+
+.boldQ {
+	font-weight: bold;
+}
+
+.choiceClass {
+	width: 300px;
+}
+
+
+
+

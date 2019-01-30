@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>Admin Page</h1>
+
+<h2>Create a Quiz</h2>
+
+<p>Question Text*</p>
+
+<form id="questionForm">
+<textarea id="questionBox" placeholder="Quiz Question">
+</textarea>
+
+<p>Answers*</p>
+	<input name ="choices" type="radio"> <input class ="choiceBox" type="text" id="choice0" placeholder="Answer 1"><br>
+	<input name ="choices" type="radio"> <input class ="choiceBox" type="text" id="choice1" placeholder="Answer 2"><br>
+	<input name ="choices" type="radio"> <input class ="choiceBox" type="text" id="choice2" placeholder="Answer 3"><br>
+	<input name ="choices" type="radio"> <input class ="choiceBox" type="text" id="choice3" placeholder="Answer 4"><br>	
+</form>
+
+<button type="button" id="addButton" onclick="addQ()"> Add Question </button>
+
+<h2> Added Questions: </h2>
+<div id="questionList">
+	
+</div>
+
+<button type="button" id="saveQuiz" onclick="storeQuiz()"> Save Quiz </button>
+
+<!-- <button type="button" id="ViewQuiz" onclick="retrieveQuiz()"> Show Quiz </button> -->
+
+<button type="button" id="ViewQuiz" onclick="clearStorage()"> Clear Storage </button>
+
+
+
+<div id="testArea">
+
+</div>
+	
+<footer>
+	<script src="js/admin.js"></script>
+</footer>
+</body>
+</html>
