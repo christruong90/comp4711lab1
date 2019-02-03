@@ -19,7 +19,7 @@ http.createServer(function (request, responce) {
     // }, 2000);
    
     // numberOfRequests++;
-    responce.writeHead(200, {'Content-type':'text/plain'});
+    responce.writeHead(200, {'Content-type':'text/html'});
     responce.write(time)
     responce.end()
 }
