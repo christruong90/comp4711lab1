@@ -14,7 +14,6 @@ function addQ(){
 	for (let i = 0; i < 4; i++) {
 		choicesArray[i] = document.getElementById("choice" + i).value
 		if (radios[i].checked) {
-			// alert("choice " + i)
 			answer = i
 		}
 	}
@@ -43,12 +42,10 @@ function newForm() {
 		f.setAttribute("id", "addedQ");
 
 		let q = document.createElement('input');
-		// let testQ = document.createTextNode(jsonData[x].questions)
 		q.setAttribute('type', 'text')
 		q.setAttribute('id', 'updateQ' + x)
 		q.setAttribute('class', 'updateQclass')
 		q.value = jsonData[x].questions
-		// q.appendChild()
 
 		f.appendChild(q)
 		f.appendChild(space1)
@@ -63,14 +60,12 @@ function newForm() {
 			let choice = jsonData[x].choices[y]
 
 
-			// console.log(choice)
 			let b = document.createElement('input')
 			b.setAttribute('type', 'text')
 			b.setAttribute('id', 'editInput' + x + y)
 			b.setAttribute('class', 'choiceClass')
 			b.value = choice
 
-			// r.appendChild(b)
 			f.appendChild(r)
 			f.appendChild(b)
 			let space = document.createElement('br')
@@ -140,7 +135,6 @@ function updateElement(index) {
 
 function storeQuiz() {
 	let jsonQuiz = JSON.stringify(jsonData)
-	// console.log(jsonQuiz)
 	localStorage.setItem('quiz', jsonQuiz)
 }
 
