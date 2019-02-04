@@ -15,4 +15,4 @@ function onRequest(request, response) {
     });
 }
 console.log('listening ...');
-http.createServer(onRequest).listen(8000);
+http.createServer(onRequest)
