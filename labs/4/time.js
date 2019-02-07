@@ -5,10 +5,10 @@ var fs = require('fs');
 let today = new Date();
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    document.getElementById("test1").innerHTML = time;
+    // document.getElementById("test1").innerHTML = time;
 
 function onRequest(request, response) {
-    response.writeHead(200, {'Content-type': 'text/plain'});
+    response.writeHead(200, {'Content-type': 'text/html'});
     fs.readFile('index.html', null, function(error, data) {
         if(error) {
             response.writeHead(404);
