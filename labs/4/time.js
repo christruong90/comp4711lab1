@@ -3,9 +3,9 @@ var fs = require('fs');
 // var numberOfRequests = 0;
 
 let today = new Date();
-let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-// document.getElementById("test1").innerHTML = time;
+    document.getElementById("test1").innerHTML = time;
 
 function onRequest(request, response) {
     response.writeHead(200, {'Content-type': 'text/plain'});
@@ -14,10 +14,11 @@ function onRequest(request, response) {
             response.writeHead(404);
             response.write('File not found');
         } else {
-            response.write(time);
+            response.write(data);
         }
         response.end()
     });
 }
 console.log('listening ...');
-http.createServer(onRequest).listen(8000)
+http.createServer(onRequest)
+
