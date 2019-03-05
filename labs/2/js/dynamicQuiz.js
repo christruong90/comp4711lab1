@@ -54,7 +54,52 @@ var quiz = [
 					"<input type=\"radio\" name=\"q5\"> <span style =\"color:green\">var</span> x = global scope and <span style =\"color:green\">var</span> y = block scope <br>"],
 			answer: 5
 
-		} 
+		},
+		{ 
+			question:"<p>6) In a method, \"this\" refers to: </p>",
+			choices: ["<input type=\"radio\" name=\"q6\"> Global Object<br>",
+					"<input type=\"radio\" name=\"q6\"> any Object<br>", 
+					"<input type=\"radio\" name=\"q6\"> undefined <br>",
+					"<input type=\"radio\" name=\"q6\"> Owner Object <br>"],
+			answer: 3
+
+		},
+		{ 
+			question:"<p>7) In a function in strict mode,  \"this\" refers to: </p>",
+			choices: ["<input type=\"radio\" name=\"q7\"> Global Object<br>",
+					"<input type=\"radio\" name=\"q7\"> Element that received the event<br>", 
+					"<input type=\"radio\" name=\"q7\"> Owner Object <br>",
+					"<input type=\"radio\" name=\"q7\"> undefined <br>"],
+			answer: 3
+
+		},
+		{ 
+			question:"<p>8) In an event,  \"this\" refers to: </p>",
+			choices: ["<input type=\"radio\" name=\"q8\"> Global Object<br>",
+					"<input type=\"radio\" name=\"q8\"> Element that received the event<br>", 
+					"<input type=\"radio\" name=\"q8\"> Owner Object <br>",
+					"<input type=\"radio\" name=\"q8\"> undefined <br>"],
+			answer: 1
+
+		},
+		{ 
+			question:"<p>9) Alone, \"this\" refers to: </p>",
+			choices: ["<input type=\"radio\" name=\"q9\"> Global Object<br>",
+					"<input type=\"radio\" name=\"q9\"> Element that received the event<br>", 
+					"<input type=\"radio\" name=\"q9\"> Owner Object <br>",
+					"<input type=\"radio\" name=\"q9\"> undefined <br>"],
+			answer: 0
+
+		},
+		{ 
+			question:"<p>10) Methods like call(), and apply() can refer this to what type of object? </p>",
+			choices: ["<input type=\"radio\" name=\"q10\"> Global Object<br>",
+					"<input type=\"radio\" name=\"q10\"> owner objects<br>", 
+					"<input type=\"radio\" name=\"q10\"> any object<br>",
+					"<input type=\"radio\" name=\"q10\"> Undefined objects <br>"],
+			answer: 2
+
+		}
 		];
 		
 	var quizKey = [1,2,3,4,5]
@@ -62,7 +107,7 @@ var quiz = [
 	function startQuiz(){
 		var userInput = prompt("Number of Questions?");
 
-		if(userInput >0 && userInput < 6) {
+		if(userInput >0 && userInput < 11) {
 			for (let i = 0; i < userInput; i++) {
 				document.writeln(quiz[i].question);
 				// document.writeln("<br>")
@@ -73,7 +118,7 @@ var quiz = [
 				document.writeln("</form>")
 			}
 		} else {
-			alert("must be a number between 0 - 5")
+			alert("must be a number between 0 - 10")
 			startQuiz();
 		}
 	}
