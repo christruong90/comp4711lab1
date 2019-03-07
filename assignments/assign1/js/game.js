@@ -10,6 +10,7 @@ let score = 0
 let amountOfTiles = beginY + 2;
 let right;
 let wrong  = 0;
+let soundPlayer = null;
 
 
 
@@ -31,7 +32,8 @@ function spin() {
 
 
 function closeGame() {
-    if (confirm('Closing Game, quit?')) {
+    if (confirm('Are you sure you want to terminate?')) {
+		localStorage.setItem("score", score);
         window.location = 'summary.html';
     }
 }
@@ -109,20 +111,23 @@ function eraseBoard() {
 function soundEffect(soundNum) {
 	switch (soundNum) {
 		case 0:
-			document.getElementById('soundEffect').play();
+			soundPlayer = document.getElementById('soundEffect');
+			soundPlayer.play();
 			break;
 		case 1:
-			document.getElementById('loseSound').play();
+			soundPlayer = document.getElementById('loseSound');
+			soundPlayer.play();
 			break;
 		case 2:
-			document.getElementById('tickSound').play();
+			soundPlayer = document.getElementById('tickSound');
+			soundPlayer.play();
+			break;
+		case 3:
+			soundPlayer = document.getElementById('wrongSound');
+			soundPlayer.play();
 			break;
 	}
 }
-
-// function loseSound() {
-	// document.getElementById('loseSound').play();
-// }
 
 
 function singleScore() {
@@ -139,6 +144,9 @@ function singleScore() {
     } else if (this.classList.contains('incorrect')) {
         this.classList.add('clickWrong');
         score--;
+		if (score > 0) {
+			soundEffect(3);
+		}
         perfectScore = false;
         wrong++;
         if (wrong !== 0) {
