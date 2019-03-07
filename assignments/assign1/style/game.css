@@ -12,11 +12,6 @@
  background-color:rgb(41, 39, 39);
 }
 
-.box:hover {
- transform: scale(.97);
- transition: transform .2s;
- background-color: rgb(78, 66, 248);
-}
 
 .box.turn {
 	transform: rotateX(180deg);
@@ -43,9 +38,28 @@ body {
  font-size:0;
 }
 
+
 .spinBoard {
- animation:spin 3s linear;
- transform: rotate(90deg);
+  animation: spin 1.0s linear;
+  transform: rotate(90deg); 
+}
+
+.clickRight {
+  background-color: rgb(49, 89, 218);
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.clickWrong {
+  background-color: rgb(173, 11, 60);
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.return {
+  background-color:rgb(41, 39, 39);
+  transform: rotateY(0deg);
+  transition: transform 1s, background-color 0.75s;
 }
 
 @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 50% { -webkit-transform: rotate(90deg); } }
