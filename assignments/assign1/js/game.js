@@ -80,6 +80,7 @@ function nextLevel() {
         amountOfTiles--;
         correctTiles(beginX, beginY);
         createMemoryBoard(beginX, beginY);
+	perfectScore = true;
         setTimeout(function() {
             spin();
         }, 3000);
